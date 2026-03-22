@@ -62,6 +62,7 @@
             gap: 25px;
             margin: 0;
             padding: 0;
+            align-items: center; /* 確保按鈕垂直置中 */
         }
         .nav-links a {
             text-decoration: none;
@@ -71,6 +72,20 @@
         }
         .nav-links a:hover {
             color: var(--primary-color);
+        }
+        
+        /* 中古機專屬導覽按鈕樣式 */
+        .used-pc-btn {
+            background-color: #e74c3c;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .used-pc-btn:hover {
+            background-color: #c0392b !important;
+            color: white !important;
         }
 
         /* 主視覺區 (Hero Section) */
@@ -233,10 +248,9 @@
             <ul class="nav-links">
                 <li><a href="#services">服務項目</a></li>
                 <li><a href="#pricing">收費標準</a></li>
-
                 <li><a href="#faq">常見問題 FAQ</a></li>
                 <li><a href="#contact">聯絡我們</a></li>
-                
+                <li><a href="used-pcs.html" target="_blank" class="used-pc-btn">💻 嚴選中古機</a></li>
             </ul>
         </div>
     </header>
@@ -431,9 +445,9 @@
         
 <a href="https://line.me/R/ti/p/AZTO12HTEK" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: #ffffff; color: #06C755; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; margin-top: 15px; border: 2px solid #06C755; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: background-color 0.2s;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" style="width: 26px; height: 26px; margin-right: 8px;">
-    加 LINE 詢問最新中古機現貨
-</a> </a>
-        <span style="display: block; margin-top: 15px; color: #999; font-size: 14px;">ID: <strong style="color: #555;">titan.su</strong></span>
+    加 LINE 預約與報價
+</a> 
+        <span style="display: block; margin-top: 15px; color: #999; font-size: 14px;">ID: <strong style="color: #555;">@titan.su</strong></span>
       </div>
 
     </div>
