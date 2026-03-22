@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>尹弘電腦維修 - 新竹竹東電腦維修、重灌、組裝</title>
-<meta name="description" content="新竹在地推薦！尹弘電腦維修提供快速專業的軟硬體維修、系統重灌、資料救援與客製化電腦組裝服務。透明報價，滿意保證，歡迎加 LINE 預約檢測。">
-  
-  <meta name="keywords" content="新竹電腦維修, 竹東電腦維修, 系統重灌, 電腦組裝, 資料救援, 電腦買賣, 尹弘電腦維修">
-  <meta name="author" content="尹弘電腦維修">
+    <meta name="description" content="新竹在地推薦！尹弘電腦維修提供快速專業的軟硬體維修、系統重灌、資料救援與客製化電腦組裝服務。透明報價，滿意保證，歡迎加 LINE 預約檢測。">
+    <meta name="keywords" content="新竹電腦維修, 竹東電腦維修, 系統重灌, 電腦組裝, 資料救援, 電腦買賣, 尹弘電腦維修">
+    <meta name="author" content="尹弘電腦維修">
 
-  <meta property="og:title" content="尹弘電腦維修 - 新竹竹東專業電腦維修">
-  <meta property="og:description" content="提供快速專業的軟硬體維修、系統重灌、資料救援與客製化電腦組裝服務。維修前均會先報價，保障您的權益。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://titan660928.github.io/my-website/">
+    <meta property="og:title" content="尹弘電腦維修 - 新竹竹東專業電腦維修">
+    <meta property="og:description" content="提供快速專業的軟硬體維修、系統重灌、資料救援與客製化電腦組裝服務。維修前均會先報價，保障您的權益。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://titan660928.github.io/my-website/">
+    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         /* 色彩變數定義 */
         :root {
-            --primary-color: #004488; /* 專業科技藍 */
-            --secondary-color: #f4f7f6; /* 淺灰背景 */
+            --primary-color: #004488; 
+            --secondary-color: #f4f7f6; 
             --text-color: #333333;
-            --accent-color: #ff7b00; /* 醒目的橘色按鈕 */
+            --accent-color: #ff7b00; 
+            --border-color: #f0f0f0;
         }
         
         body {
@@ -48,6 +51,7 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 15px 20px;
+            flex-wrap: wrap; /* 允許在小螢幕時折行 */
         }
         .logo {
             font-size: 1.4rem;
@@ -62,7 +66,8 @@
             gap: 25px;
             margin: 0;
             padding: 0;
-            align-items: center; /* 確保按鈕垂直置中 */
+            align-items: center;
+            flex-wrap: wrap;
         }
         .nav-links a {
             text-decoration: none;
@@ -74,7 +79,6 @@
             color: var(--primary-color);
         }
         
-        /* 中古機專屬導覽按鈕樣式 */
         .used-pc-btn {
             background-color: #e74c3c;
             color: white !important;
@@ -85,7 +89,6 @@
         }
         .used-pc-btn:hover {
             background-color: #c0392b !important;
-            color: white !important;
         }
 
         /* 主視覺區 (Hero Section) */
@@ -145,7 +148,7 @@
             border-radius: 2px;
         }
 
-        /* 服務項目 (卡片設計) */
+        /* 服務項目 */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -158,7 +161,7 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #f0f0f0;
+            border: 1px solid var(--border-color);
         }
         .service-card:hover {
             transform: translateY(-8px);
@@ -167,6 +170,7 @@
         .service-icon {
             font-size: 3.5rem;
             margin-bottom: 20px;
+            color: var(--primary-color);
         }
         .service-card h3 {
             color: var(--primary-color);
@@ -174,69 +178,206 @@
         }
 
         /* 收費標準 */
-        .pricing-section {
-            background-color: var(--secondary-color);
+        #pricing {
+            background-color: #ffffff;
         }
-        .pricing-list {
+        .pricing-box {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+        }
+        .pricing-list {
+            background: #fff;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            padding: 10px 30px;
+            list-style: none;
+            margin: 0;
         }
         .pricing-item {
             display: flex;
             justify-content: space-between;
-            padding: 25px 30px;
-            border-bottom: 1px solid #f0f0f0;
+            align-items: center;
+            padding: 25px 0;
+            border-bottom: 1px solid var(--border-color);
         }
         .pricing-item:last-child {
             border-bottom: none;
         }
-        .pricing-item span:first-child {
-            font-weight: 500;
-        }
-        .price {
-            font-weight: bold;
-            color: var(--accent-color);
+        .pricing-name {
             font-size: 1.1rem;
+            color: #2c3e50;
+            display: block;
+            font-weight: bold;
         }
-        .pricing-note {
+        .pricing-desc {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 6px;
+            display: block;
+        }
+        .pricing-amount {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #e74c3c;
+            text-align: right;
+        }
+        .pricing-amount span {
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: #7f8c8d;
+        }
+        .pricing-warning {
+            margin-top: 30px;
             text-align: center;
-            margin-top: 25px;
-            color: #777;
-            font-size: 0.95rem;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+            color: #555;
+        }
+
+        /* 常見問題 FAQ */
+        .faq-box details {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+        .faq-box summary {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #004488;
+            outline: none;
+        }
+        .faq-box p {
+            margin-top: 15px;
+            color: #444;
         }
 
         /* 聯絡我們 */
-        .contact-info {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            line-height: 2.2;
-            font-size: 1.1rem;
+        #contact {
+            background-color: var(--secondary-color);
         }
-        .contact-info p {
-            margin: 10px 0;
+        .contact-subtitle {
+            text-align: center;
+            color: #666;
+            margin-top: -40px;
+            margin-bottom: 40px;
+        }
+        .contact-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+            padding: 40px;
             display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
             align-items: center;
         }
-        .contact-info strong {
-            color: var(--primary-color);
-            width: 120px;
+        .contact-info-list {
+            flex: 1;
+            min-width: 250px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-info-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .contact-icon {
+            font-size: 1.4rem;
+            margin-right: 15px;
+        }
+        .contact-info-list strong {
+            display: block;
+            color: #2c3e50;
+        }
+        .contact-line-box {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #fdfdfd;
+            border-radius: 10px;
+            border: 1px dashed #cccccc;
+        }
+        .line-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            color: #06C755;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 15px;
+            border: 2px solid #06C755;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .line-btn:hover {
+            background-color: #06C755;
+            color: #ffffff;
+        }
+        .line-btn img {
+            width: 26px;
+            height: 26px;
+            margin-right: 8px;
+        }
+        .map-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
         }
 
         /* 頁尾 */
         footer {
+            text-align: center;
+            padding: 30px 20px;
             background-color: #1a1a1a;
             color: #aaaaaa;
-            text-align: center;
-            padding: 25px;
             font-size: 0.9rem;
+        }
+
+        /* 響應式設計 (RWD) */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                gap: 15px;
+                justify-content: center;
+            }
+            .hero {
+                padding: 60px 20px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .contact-card {
+                flex-direction: column;
+                padding: 25px;
+            }
+            .pricing-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .pricing-amount {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -255,219 +396,168 @@
         </div>
     </header>
 
-    <div class="hero">
-        <h1>新竹在地推薦！專業、快速的軟硬體維修與買賣</h1>
-        <p>提供您最值得信賴的電腦檢測、系統救援與升級服務</p>
-        <a href="#contact" class="btn">立即預約檢測</a>
-    </div>
-
-
-    <section id="services">
-        <h2 class="section-title">我們的專業服務</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🛠️</div>
-
-                <h3>電腦維修</h3>
-                <p>電腦突然罷工怎麼辦？我們提供親切、白話的專業檢測。從開不了機、網路連不上，到搶救珍貴的家庭照片與資料，通通幫您妥善處理，讓家裡的電腦再次乖乖聽話。</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🤝</div>
-                <h3>電腦買賣</h3>
-                <p>不懂規格也沒關係！我們會根據您的預算和用途（如小孩線上學習、長輩看影片、日常辦公），為您搭配最划算的新機。同時提供嚴格把關的平價二手電腦，幫您精打細算、減輕家庭開銷。</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">⚙️</div>
-                <h3>配件與升級</h3>
-                <p>家裡的老電腦跑不動了嗎？先別急著花大錢換新！只要做個簡單的升級（例如換上 SSD 固態硬碟），花小錢就能讓舊電腦告別卡頓，全家人上網、看劇都能順暢無比。</p>
-            </div>
+    <main>
+        <div class="hero">
+            <h1>新竹在地推薦！專業、快速的軟硬體維修與買賣</h1>
+            <p>提供您最值得信賴的電腦檢測、系統救援與升級服務</p>
+            <a href="#contact" class="btn">立即預約檢測</a>
         </div>
-    </section>
-<section id="pricing" style="padding: 60px 20px; background-color: #ffffff;">
-  <div style="max-width: 800px; margin: 0 auto;">
-    
-    <div style="text-align: center; margin-bottom: 40px;">
-     <h2 class="section-title">透明、公道的收費標準</h2>
-     
-    <div style="background: #fff; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.06); padding: 10px 30px;">
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        
-        <li style="display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid #f0f0f0;">
-          <div>
-            <strong style="font-size: 18px; color: #2c3e50; display: block;">系統重灌</strong>
-            <span style="font-size: 14px; color: #7f8c8d; margin-top: 6px; display: block;">含驅動程式安裝與設定</span>
-          </div>
-          <div style="text-align: right;">
-            <span style="font-size: 22px; font-weight: 600; color: #e74c3c;">NT$ 800</span>
-          </div>
-        </li>
 
-        <li style="display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid #f0f0f0;">
-          <div>
-            <strong style="font-size: 18px; color: #2c3e50; display: block;">硬體故障檢測</strong>
-            <span style="font-size: 14px; color: #7f8c8d; margin-top: 6px; display: block;">若後續維修可折抵</span>
-          </div>
-          <div style="text-align: right;">
-            <span style="font-size: 22px; font-weight: 600; color: #e74c3c;">NT$ 300</span>
-          </div>
-        </li>
-
-        <li style="display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid #f0f0f0;">
-          <div>
-            <strong style="font-size: 18px; color: #2c3e50; display: block;">資料救援</strong>
-            <span style="font-size: 14px; color: #7f8c8d; margin-top: 6px; display: block;">依硬碟損壞程度報價</span>
-          </div>
-          <div style="text-align: right;">
-            <span style="font-size: 22px; font-weight: 600; color: #e74c3c;">NT$ 1,500 <span style="font-size: 14px; font-weight: normal; color: #7f8c8d;">起</span></span>
-          </div>
-        </li>
-
-        <li style="display: flex; justify-content: space-between; align-items: center; padding: 25px 0;">
-          <div>
-            <strong style="font-size: 18px; color: #2c3e50; display: block;">客製化電腦組裝</strong>
-            <span style="font-size: 14px; color: #7f8c8d; margin-top: 6px; display: block;">代客組裝費</span>
-          </div>
-          <div style="text-align: right;">
-            <span style="font-size: 22px; font-weight: 600; color: #e74c3c;">NT$ 1,000 <span style="font-size: 14px; font-weight: normal; color: #7f8c8d;">起</span></span>
-          </div>
-        </li>
-        
-      </ul>
-    </div>
-
-    <div style="margin-top: 30px; text-align: center; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #f39c12;">
-      <p style="font-size: 15px; color: #555; margin: 0; line-height: 1.6;">
-        * 以上為參考價格，實際價格可能因設備狀況有所不同。<br>
-        <strong style="color: #2c3e50;">維修前均會先報價，同意後才施工，保障您的權益。</strong>
-      </p>
-    </div>
-<div class="product-container" style="max-width: 800px; margin: 20px auto; padding: 20px; font-family: 'Helvetica Neue', Arial, 'LiHei Pro', '微軟正黑體', sans-serif; line-height: 1.6; color: #333; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; background-color: #fff;">
-
-
-    </div>
-
-</div>
-    
-  </div>
-</section>
-<section id="faq" class="container">
-        <h2 class="section-title">常見問題 FAQ</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fa-solid fa-clock service-icon"></i>
-
-  <details style="margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
-    <summary style="font-weight: bold; cursor: pointer; font-size: 1.1em; color: #0056b3; outline: none;">
-      Q1：電腦壞了拿去給你們檢查，如果最後決定不修，需要收檢測費嗎？
-    </summary>
-    <p style="margin-top: 15px; line-height: 1.6; color: #444;">
-      我們了解您的擔憂！電腦送來後，我們會先進行初步檢測並找出問題點。如果只是簡單排解，我們不會額外收費；若是硬體損壞需要拆機詳細檢測，我們會先向您說明可能產生的基本檢測費。確認問題後會給您明確的報價，<strong>您同意報價後我們才會開始維修</strong>，絕對不會有修完才漫天要價的情況。
-    </p>
-  </details>
-
-  <details style="margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
-    <summary style="font-weight: bold; cursor: pointer; font-size: 1.1em; color: #0056b3; outline: none;">
-      Q2：開不了機，裡面有很多珍貴的家庭照片跟重要資料，還救得回來嗎？
-    </summary>
-    <p style="margin-top: 15px; line-height: 1.6; color: #444;">
-      開不了機通常是系統或部分零件故障，硬碟裡的照片跟資料很可能都還安然無恙！請您先不要慌張，也不要反覆嘗試開機以免造成二次傷害。直接把電腦交給我們，我們會在維修前優先幫您確認資料的安全，盡全力為您搶救珍貴的回憶。
-    </p>
-  </details>
-
-  <details style="margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
-    <summary style="font-weight: bold; cursor: pointer; font-size: 1.1em; color: #0056b3; outline: none;">
-      Q3：維修大概需要幾天的時間？小孩急著要用電腦交作業怎麼辦？
-    </summary>
-    <p style="margin-top: 15px; line-height: 1.6; color: #444;">
-      我們非常清楚沒有電腦的不便！如果是常見的系統重灌、小零件更換或升級，通常 <strong>1 到 2 個工作天</strong> 內就能讓您帶回家。若是遇到特殊零件損壞需要叫貨，我們也會在檢測後第一時間告知您預計的完修時間，絕不讓您無止盡地等待。
-    </p>
-  </details>
-
-  <details style="margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
-    <summary style="font-weight: bold; cursor: pointer; font-size: 1.1em; color: #0056b3; outline: none;">
-      Q4：我想買一台電腦，但我不懂規格怎麼辦？
-    </summary>
-    <p style="margin-top: 15px; line-height: 1.6; color: #444;">
-      完全沒問題！您不需要去研究複雜的規格表。只要告訴我們您的「主要用途（如：小孩線上學習、長輩看劇）」跟「大約預算」，我們就會為您搭配最適合、CP 值最高的全新機或二手良機。把錢花在刀口上，就是我們的承諾。
-    </p>
-  </details>
-
-  <details style="margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; padding: 15px; background-color: #f9f9f9;">
-    <summary style="font-weight: bold; cursor: pointer; font-size: 1.1em; color: #0056b3; outline: none;">
-      Q5：家裡的老電腦跑得很慢，一定要買新的嗎？
-    </summary>
-    <p style="margin-top: 15px; line-height: 1.6; color: #444;">
-      先別急著換新！很多時候，老電腦只要花一點點小錢做個升級（例如換上 SSD 固態硬碟或增加記憶體），速度就會有感提升，足以應付一般的上網、看劇和文書處理。把電腦帶來讓我們評估看看，能幫您省錢我們就盡量省！
-    </p>
-  </details>
-</section>
-    </div>
-
-<section id="contact" style="padding: 60px 20px; background-color: #f0f4f8;">
-  <div style="max-width: 800px; margin: 0 auto;">
-    
-    <div style="text-align: center; margin-bottom: 40px;">
-     <h2 class="section-title">連絡我們</h2>
-      <p style="color: #666; margin-top: 20px; font-size: 16px; line-height: 1.6;">我們以客戶滿意為首要目標，有任何需求請隨時與我們聯繫！</p>
-    </div>
-    
-    <div style="background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); padding: 40px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: center;">
-      
-      <div style="flex: 1; min-width: 250px;">
-        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-          <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
-            <span style="font-size: 22px; margin-right: 15px;">📍</span>
-            <div>
-              <strong style="display: block; color: #2c3e50; font-size: 16px;">維修地址</strong>
-              <span style="color: #555; font-size: 15px;">新竹縣竹東鎮幸福路121巷23號</span>
+        <section id="services">
+            <h2 class="section-title">我們的專業服務</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>電腦維修</h3>
+                    <p>電腦突然罷工怎麼辦？我們提供親切、白話的專業檢測。從開不了機、網路連不上，到搶救珍貴的家庭照片與資料，通通幫您妥善處理，讓家裡的電腦再次乖乖聽話。</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>電腦買賣</h3>
+                    <p>不懂規格也沒關係！我們會根據您的預算和用途（如小孩線上學習、長輩看影片、日常辦公），為您搭配最划算的新機。同時提供嚴格把關的平價二手電腦，幫您精打細算、減輕家庭開銷。</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>配件與升級</h3>
+                    <p>家裡的老電腦跑不動了嗎？先別急著花大錢換新！只要做個簡單的升級（例如換上 SSD 固態硬碟），花小錢就能讓舊電腦告別卡頓，全家人上網、看劇都能順暢無比。</p>
+                </div>
             </div>
-          </li>
-          <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
-            <span style="font-size: 22px; margin-right: 15px;">📞</span>
-            <div>
-              <strong style="display: block; color: #2c3e50; font-size: 16px;">服務專線</strong>
-              <span style="color: #3498db; font-size: 18px; font-weight: bold; letter-spacing: 1px;">0933-669910</span>
-            </div>
-          </li>
-          <li style="display: flex; align-items: flex-start;">
-            <span style="font-size: 22px; margin-right: 15px;">🕒</span>
-            <div>
-              <strong style="display: block; color: #2c3e50; font-size: 16px;">營業時間</strong>
-              <span style="color: #555; font-size: 15px;">週一至週六 08:00 - 20:00</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-      
-      <div style="flex: 1; min-width: 250px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; background-color: #fdfdfd; border-radius: 10px; border: 1px dashed #e0e0e0;">
-        <p style="color: #2c3e50; font-size: 18px; font-weight: bold; margin-top: 0; margin-bottom: 10px;">線上諮詢最快速</p>
-        <p style="color: #7f8c8d; font-size: 14px; margin-bottom: 25px;">加入官方 LINE，傳送照片快速評估</p>
-        
-<a href="https://line.me/R/ti/p/AZTO12HTEK" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: #ffffff; color: #06C755; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; margin-top: 15px; border: 2px solid #06C755; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: background-color 0.2s;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" style="width: 26px; height: 26px; margin-right: 8px;">
-    加 LINE 預約與報價
-</a> 
-        <span style="display: block; margin-top: 15px; color: #999; font-size: 14px;">ID: <strong style="color: #555;">@titan.su</strong></span>
-      </div>
+        </section>
 
-    </div>
-  </div>
-<div style="margin-top: 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.05);">
-      <iframe 
-        width="100%" 
-        height="350" 
-        frameborder="0" 
-        scrolling="no" 
-        marginheight="0" 
-        marginwidth="0" 
-        src="https://maps.google.com/maps?q=新竹縣竹東鎮幸福路121巷23號&t=&z=16&ie=UTF8&iwloc=&output=embed&hl=zh-TW"
-        style="border:0; display: block;">
-      </iframe>
-    </div>
-</section>
-       <footer style="text-align: center; padding: 30px 20px; background-color: #ffffff; color: #7f8c8d; font-size: 14px; border-top: 1px solid #eaeaea;">
-  © 2026 尹弘電腦維修. All rights reserved.
-</footer>
+        <section id="pricing">
+            <div class="pricing-box">
+                <h2 class="section-title">透明、公道的收費標準</h2>
+                
+                <ul class="pricing-list">
+                    <li class="pricing-item">
+                        <div>
+                            <span class="pricing-name">系統重灌</span>
+                            <span class="pricing-desc">含驅動程式安裝與設定</span>
+                        </div>
+                        <div class="pricing-amount">NT$ 800</div>
+                    </li>
+                    <li class="pricing-item">
+                        <div>
+                            <span class="pricing-name">硬體故障檢測</span>
+                            <span class="pricing-desc">若後續維修可折抵</span>
+                        </div>
+                        <div class="pricing-amount">NT$ 300</div>
+                    </li>
+                    <li class="pricing-item">
+                        <div>
+                            <span class="pricing-name">資料救援</span>
+                            <span class="pricing-desc">依硬碟損壞程度報價</span>
+                        </div>
+                        <div class="pricing-amount">NT$ 1,500 <span>起</span></div>
+                    </li>
+                    <li class="pricing-item">
+                        <div>
+                            <span class="pricing-name">客製化電腦組裝</span>
+                            <span class="pricing-desc">代客組裝費</span>
+                        </div>
+                        <div class="pricing-amount">NT$ 1,000 <span>起</span></div>
+                    </li>
+                </ul>
+
+                <div class="pricing-warning">
+                    * 以上為參考價格，實際價格可能因設備狀況有所不同。<br>
+                    <strong>維修前均會先報價，同意後才施工，保障您的權益。</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title">常見問題 FAQ</h2>
+            <div class="faq-box" style="max-width: 800px; margin: 0 auto;">
+                <details>
+                    <summary>Q1：電腦壞了拿去給你們檢查，如果最後決定不修，需要收檢測費嗎？</summary>
+                    <p>我們了解您的擔憂！電腦送來後，我們會先進行初步檢測並找出問題點。如果只是簡單排解，我們不會額外收費；若是硬體損壞需要拆機詳細檢測，我們會先向您說明可能產生的基本檢測費。確認問題後會給您明確的報價，<strong>您同意報價後我們才會開始維修</strong>，絕對不會有修完才漫天要價的情況。</p>
+                </details>
+
+                <details>
+                    <summary>Q2：開不了機，裡面有很多珍貴的家庭照片跟重要資料，還救得回來嗎？</summary>
+                    <p>開不了機通常是系統或部分零件故障，硬碟裡的照片跟資料很可能都還安然無恙！請您先不要慌張，也不要反覆嘗試開機以免造成二次傷害。直接把電腦交給我們，我們會在維修前優先幫您確認資料的安全，盡全力為您搶救珍貴的回憶。</p>
+                </details>
+
+                <details>
+                    <summary>Q3：維修大概需要幾天的時間？小孩急著要用電腦交作業怎麼辦？</summary>
+                    <p>我們非常清楚沒有電腦的不便！如果是常見的系統重灌、小零件更換或升級，通常 <strong>1 到 2 個工作天</strong> 內就能讓您帶回家。若是遇到特殊零件損壞需要叫貨，我們也會在檢測後第一時間告知您預計的完修時間，絕不讓您無止盡地等待。</p>
+                </details>
+
+                <details>
+                    <summary>Q4：我想買一台電腦，但我不懂規格怎麼辦？</summary>
+                    <p>完全沒問題！您不需要去研究複雜的規格表。只要告訴我們您的「主要用途（如：小孩線上學習、長輩看劇）」跟「大約預算」，我們就會為您搭配最適合、CP 值最高的全新機或二手良機。把錢花在刀口上，就是我們的承諾。</p>
+                </details>
+
+                <details>
+                    <summary>Q5：家裡的老電腦跑得很慢，一定要買新的嗎？</summary>
+                    <p>先別急著換新！很多時候，老電腦只要花一點點小錢做個升級（例如換上 SSD 固態硬碟或增加記憶體），速度就會有感提升，足以應付一般的上網、看劇和文書處理。把電腦帶來讓我們評估看看，能幫您省錢我們就盡量省！</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">聯絡我們</h2>
+            <p class="contact-subtitle">我們以客戶滿意為首要目標，有任何需求請隨時與我們聯繫！</p>
+            
+            <div class="contact-card">
+                <ul class="contact-info-list">
+                    <li>
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>維修地址</strong>
+                            <span>新竹縣竹東鎮幸福路121巷23號</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>服務專線</strong>
+                            <span style="color: #3498db; font-size: 1.2rem; font-weight: bold; letter-spacing: 1px;">0933-669910</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon">🕒</span>
+                        <div>
+                            <strong>營業時間</strong>
+                            <span>週一至週六 08:00 - 20:00</span>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="contact-line-box">
+                    <p style="color: #2c3e50; font-size: 1.2rem; font-weight: bold; margin: 0 0 10px 0;">線上諮詢最快速</p>
+                    <p style="color: #7f8c8d; font-size: 0.9rem; margin: 0 0 15px 0;">加入官方 LINE，傳送照片快速評估</p>
+                    
+                    <a href="https://line.me/R/ti/p/AZTO12HTEK" target="_blank" class="line-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE">
+                        加 LINE 預約與報價
+                    </a> 
+                    <span style="display: block; margin-top: 15px; color: #999; font-size: 0.9rem;">ID: <strong>@titan.su</strong></span>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    width="100%" 
+                    height="350" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://maps.google.com/maps?q=%E6%96%B0%E7%AB%B9%E7%B8%A3%E7%AB%B9%E6%9D%B1%E9%8E%AE%E5%B9%B8%E7%A6%8F%E8%B7%AF121%E5%B7%B723%E8%99%9F&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    style="border:0; display: block;">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 尹弘電腦維修. All rights reserved.
+    </footer>
+
+</body>
+</html>
 
 </body>
 </html>
